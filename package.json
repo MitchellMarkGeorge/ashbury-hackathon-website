@@ -4,9 +4,10 @@
   "description": "",
   "main": "public/dist/server.js",
   "scripts": {
-    "start": "tsc && node public/dist/server.js",
+    "start": "node public/dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
+    "postinstall": "npm run build",
     "dev": "nodemon src/server.ts"
     
 
