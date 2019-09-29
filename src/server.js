@@ -1,16 +1,16 @@
-import express from 'express';
-import * as path from 'path'
+var express = require('express')
+var path = require('path')
 
-let app = express();
+var app = express();
 
-let port = 3000 || process.env.PORT;
+var port = 3000 || process.env.PORT;
 
 app.use(express.static('public'))
-app.get('/', (req, res) => {
+app.get('/', function(req, res) {
     res.sendFile(path.resolve('public', 'index.html'));
 });
 
-app.listen(port, () => {
+app.listen(port, function() {
     console.log(`server is runnig at port ${port}`);
     //console.log(path.resolve('public', 'index.html'));
 });
